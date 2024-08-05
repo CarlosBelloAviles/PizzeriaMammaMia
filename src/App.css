@@ -1,0 +1,168 @@
+.contenedor_padre{
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  background-color: black;
+  padding: 20px;
+}
+.title {
+  color: white;
+  font-size: 18px;
+}
+.Nav_Button {
+  display: flex;
+  gap: 10px;
+  height: 40px;
+  align-items: center;
+  
+ 
+}
+
+.bottons {
+  display: flex;
+ gap: 7px;
+
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  height: 20px;
+  align-items: center;
+  border: 2px solid rgb(20, 5, 44);
+  border-radius: 40px;
+  width: 370px;
+  height: 40px;
+  
+}
+
+button{
+  border: 3px solid rgb(141, 74, 19);
+  border-radius: 45%;
+  width: 110px;
+  height: 37px;
+  
+}
+
+.total {
+  justify-content: end;
+  text-align: end;
+}
+
+.header {
+  background-image: url("./assets/img/delicious-pepperoni-pizza-stockcake.jpg");
+  background-color: rgb(100, 100, 100);
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  object-fit: cover;
+  height: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 60px;
+ color: white;
+  font-weight: 600;
+}
+
+.subtitulo {
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}
+
+.pizzas {
+  display: flex;
+ 
+  justify-content: center;
+  gap: 18px;
+  padding-top: 70px;
+  padding-bottom: 30px;
+ 
+  background-image: url('../src/assets/img/IMG-20240729-WA0039\(1\).jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+
+
+.cardPizza {
+ 
+  display: block;
+  text-align: center;
+ 
+  width: 380px;
+  color: white;
+  background-image: radial-gradient(circle, #194b95, #006091, #006c73, #2e7255, #677449);
+  border-top-left-radius: 10%;
+  border-image: linear-gradient(to right, #960b0b, #bdc01b, #413fb8 100%) 1;
+  border-width: 4px;
+  border-style: solid;
+  
+}
+
+h3{
+  font-size: 24px;
+}
+
+h4{
+  font-size: 20px;
+}
+p{
+  font-size: 18px;
+}
+
+
+
+.pizzaImg {
+  height: 300px;
+  width: 100%;
+  border-top-left-radius: 10%;
+}
+
+.tittleCard {
+  text-align: start;
+  padding-left: 12px;
+}
+.precio {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.añadir {
+  background-color: black;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+ 
+}
