@@ -58,7 +58,7 @@ button{
   text-align: end;
 }
 
-.header {
+ .header {
   background-image: url("./assets/img/delicious-pepperoni-pizza-stockcake.jpg");
   background-color: rgb(100, 100, 100);
   background-blend-mode: soft-light;
@@ -90,12 +90,10 @@ h1 {
 
 .pizzas {
   display: flex;
- 
   justify-content: center;
   gap: 18px;
   padding-top: 70px;
   padding-bottom: 30px;
- 
   background-image: url('../src/assets/img/IMG-20240729-WA0039\(1\).jpg');
   background-size:cover;
   background-repeat: no-repeat;
@@ -106,18 +104,24 @@ h1 {
 
 
 .cardPizza {
- 
   display: block;
+  position: relative;
   text-align: center;
- 
+  padding: 10px;
   width: 380px;
   color: white;
-  background-image: radial-gradient(circle, #194b95, #006091, #006c73, #2e7255, #677449);
+  background: linear-gradient(45deg, #960b0b, #bdc01b, #413fb8 ) ;
   border-top-left-radius: 10%;
-  border-image: linear-gradient(to right, #960b0b, #bdc01b, #413fb8 100%) 1;
-  border-width: 4px;
-  border-style: solid;
+  overflow: hidden;
+ 
+}
+
+.cardPizza > div{
+  border-top-left-radius: 10%;
+  padding: 10px;
   
+  background-clip: padding-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h3{
@@ -137,6 +141,7 @@ p{
   height: 300px;
   width: 100%;
   border-top-left-radius: 10%;
+ 
 }
 
 .tittleCard {
