@@ -8,6 +8,7 @@ function Nagvar() {
   return (
     <section className='container'>
     <div className='Nav_Button'>
+     
       <p className='title'>Pizzería Mamma Mía!</p>
       <nav className='menu'>
         <button>🍕 Home</button>

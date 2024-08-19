@@ -4,15 +4,19 @@ const CardPizza =(props) => {
   return (
     
     <div className='cardPizza'>
-    <img src={props.img} className='pizzaImg'></img>
+    <img src={props.imagen} className='pizzaImg'></img>
      
         <h3 className='tittleCard'>Pizza {props.nombre}</h3>
         
         <div >
           <hr />
-      <h4>Ingredientes:
-        <p> 🍕{props.ingredientes.join(', ')}</p> 
-      </h4>
+      <h4>Ingredientes: </h4>
+        <ul>
+        {props.ingredientes.map((ingrediente, index)=> (
+          <li key={index}>{ingrediente}</li>
+        ))}
+        </ul>
+      
       <hr />
       <p className='precio'>Precio: <span>$ {props.precio.toLocaleString()}</span></p>
         <hr />

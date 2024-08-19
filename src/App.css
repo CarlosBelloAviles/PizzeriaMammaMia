@@ -13,6 +13,8 @@
   background-color: black;
   padding: 20px;
 }
+
+
 .title {
   color: white;
   font-size: 18px;
@@ -47,7 +49,7 @@
 
 button{
   border: 3px solid rgb(141, 74, 19);
-  border-radius: 45%;
+ 
   width: 110px;
   height: 37px;
   
@@ -89,11 +91,13 @@ h1 {
 }
 
 .pizzas {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, fr);
+  row-gap: 35px;
+  
   justify-content: center;
-  gap: 18px;
-  padding-top: 70px;
-  padding-bottom: 30px;
+  padding: 30px;
   background-image: url('../src/assets/img/IMG-20240729-WA0039\(1\).jpg');
   background-size:cover;
   background-repeat: no-repeat;
@@ -179,6 +183,42 @@ form{
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+
+
+.pizzaCart{
+ justify-content: center;
+ text-align: center;
+ background-color:darkslategray;
+ border: 2px solid goldenrod;
+ 
+}
+
+.pizzaImgCart{
+  height: 250px;
+  width: 100%;
+}
+
+h3, p{
+  color: white;
+}
+.contadorPizza{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+.disminuir{
+  width: 30px;
+  background-color: #960b0b;
+  color: white;
+}
+
+.incrementar{
+  width: 30px;
+  background-color: green;
+  color: white;
 }
 .footer {
   display: flex;

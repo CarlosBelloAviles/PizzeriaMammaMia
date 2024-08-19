@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./Header";
+import {pizzas} from "../pizzas"
 import CardPizza from "./CardPizza";
+
 
 
 
@@ -12,7 +14,23 @@ function Home() {
         descripcion="¡Tenemos las mejores pizzas que podrás encontrar!"
       />
       <main className="pizzas">
-      <CardPizza
+     {
+        pizzas.map((pizza)=>(
+          <div key={pizza.id}>
+          <CardPizza 
+           imagen={pizza.img}
+           nombre={pizza.name}
+           ingredientes={pizza.ingredients}
+           precio={pizza.price}
+        
+             />
+        </div>
+       
+       )) }
+    
+    
+     
+     {/* <CardPizza
         img= "https://images.stockcake.com/public/a/3/e/a3e24ca5-8453-4855-b5a6-68f52efdec21_large/delicious-pepperoni-pizza-stockcake.jpg"
         nombre="Pepperoni"
         precio={6950}
@@ -30,7 +48,8 @@ function Home() {
         precio={7500}
         ingredientes= {["Salmón", "Queso", "Hierbas" ]}
       
-      />
+  />*/}
+
       
       
       </main>
