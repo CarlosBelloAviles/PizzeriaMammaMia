@@ -35,38 +35,41 @@ const CartGrilla = () => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        gap: 8,
-        padding: 25,
-        backgroundColor: "greenyellow",
-      }}
-    >
+   
+    <>
       {pizzaList.length === 0 ? (
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={{display:"flex", flexDirection:"column",justifyContent:"center", alignItems:"center",  backgroundColor: "greenyellow", height:"100vh",
+      }}>
           <h1>Carrito de compras</h1>
-          <div style={{ backgroundColor: "red", textAlign: "center" }}>
+          <div style={{ backgroundColor: "red", textAlign: "center", width: 350}}>
             <p>El Carrito esta Vacío</p>
-          </div>
-        </div>
-      ) : (
+            </div>
+            </div>
+            ) : (
         <>
+           <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:12, padding:10, backgroundColor: "greenyellow",}}>
           <h1>Carrito de compras</h1>
           <h2>Total: ${total}</h2>
+          <div style={{display:"flex",gap:12}}>
           {pizzaList.map((cartPizza) => (
+            
             <Cart
               key={cartPizza.id}
               producto={cartPizza}
               increment={incrementHandle}
               decrement={decrementHandle}
             />
-          ))}
-          ;
+            
+          ))};
+          </div>
+          <div><button >Comprar</button></div>
+          </div>
         </>
+       
       )}
-    </div>
+      
+    </>
+    
   );
 };
 
