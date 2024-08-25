@@ -1,7 +1,8 @@
 .contenedor_padre{
   min-height: 100dvh;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto auto;
+ 
 }
 
 
@@ -12,6 +13,7 @@
   justify-content: space-between;
   background-color: black;
   padding: 20px;
+ 
 }
 
 
@@ -49,7 +51,6 @@
 
 button{
   border: 3px solid rgb(141, 74, 19);
- 
   width: 110px;
   height: 37px;
   
@@ -80,7 +81,7 @@ button{
 
 h1 {
   font-size: 60px;
- color: white;
+  color: white;
   font-weight: 600;
 }
 
@@ -95,7 +96,6 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, fr);
   row-gap: 35px;
-  
   justify-content: center;
   padding: 30px;
   background-image: url('../src/assets/img/IMG-20240729-WA0039\(1\).jpg');
@@ -103,7 +103,8 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   
-}
+ 
+ }
 
 
 
@@ -114,16 +115,17 @@ h1 {
   padding: 10px;
   width: 380px;
   color: white;
-  background: linear-gradient(45deg, #960b0b, #bdc01b, #413fb8 ) ;
+  background: #30303d;
   border-top-left-radius: 10%;
   overflow: hidden;
  
+ 
+  
 }
 
 .cardPizza > div{
   border-top-left-radius: 10%;
   padding: 10px;
-  
   background-clip: padding-box;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -167,6 +169,7 @@ p{
   background-color: black;
   color: white;
 }
+
 
 form{
   display: flex;

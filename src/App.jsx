@@ -6,19 +6,18 @@ import Login from './componentes/Login.jsx'
 import './App.css'
 import Registro from './componentes/Registro.jsx'
 import CartGrilla from './componentes/CartGrilla.jsx'
+import Pizza from './componentes/Pizza.jsx'
 
 
 
 function App() {
-  
-
   return (
       <>
       <div className="contenedor_padre" >
-      <Nagvar/>
-      
-      {/*<Home/>*/}
-      <CartGrilla/>
+      <Nagvar />
+      {/* <Home/> */}
+      <Pizza />
+      {/*<CartGrilla/>*/}
       {/*<Login/>*/}
       {/*<Registro/>*/}
       <Footer/>

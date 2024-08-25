@@ -1,12 +1,24 @@
-import React from "react";
 import Header from "./Header";
-import {pizzas} from "../pizzas"
+/*import {pizzas} from "../pizzas"*/
 import CardPizza from "./CardPizza";
-
-
-
+import { useEffect, useState } from "react";
 
 function Home() {
+  const [pizzas, setPizzas] = useState([]);
+
+  useEffect(() => {
+    getPizzas();
+  }, []);
+
+  const getPizzas = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/pizzas");
+      const data = await response.json();
+      setPizzas(data);
+    } catch (error) {
+      console.error("Error fetching pizza data:", error);
+    }
+  };
   return (
     <>
       <Header
@@ -14,44 +26,16 @@ function Home() {
         descripcion="¡Tenemos las mejores pizzas que podrás encontrar!"
       />
       <main className="pizzas">
-     {
-        pizzas.map((pizza)=>(
+        {pizzas.map((pizza) => (
           <div key={pizza.id}>
-          <CardPizza 
-           imagen={pizza.img}
-           nombre={pizza.name}
-           ingredientes={pizza.ingredients}
-           precio={pizza.price}
-        
-             />
-        </div>
-       
-       )) }
-    
-    
-     
-     {/* <CardPizza
-        img= "https://images.stockcake.com/public/a/3/e/a3e24ca5-8453-4855-b5a6-68f52efdec21_large/delicious-pepperoni-pizza-stockcake.jpg"
-        nombre="Pepperoni"
-        precio={6950}
-        ingredientes= {["mozarella ", "aceitunas ", "morrones" ]}
-      />
-      <CardPizza
-        img= "https://images.stockcake.com/public/2/e/3/2e3e5370-f8db-40eb-9148-31389f0d55aa_large/margherita-pizza-feast-stockcake.jpg"
-        nombre="Margarita"
-        precio={5350}
-        ingredientes= {["Albahaca ", "Mozarella ", "Tomate" ]}
-      />
-      <CardPizza
-        img= "https://images.stockcake.com/public/a/4/3/a4300db7-4756-49a6-b684-5315813d2ca8_large/smoked-salmon-pizza-stockcake.jpg"
-        nombre="Salmón Ahumado"
-        precio={7500}
-        ingredientes= {["Salmón", "Queso", "Hierbas" ]}
-      
-  />*/}
-
-      
-      
+            <CardPizza
+              imagen={pizza.img}
+              nombre={pizza.name}
+              ingredientes={pizza.ingredients}
+              precio={pizza.price}
+            />
+          </div>
+        ))}
       </main>
     </>
   );

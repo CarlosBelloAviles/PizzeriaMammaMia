@@ -30,46 +30,65 @@ const CartGrilla = () => {
     );
   };
   const getTotal = () => {
-   const totalPizza = pizzaList.reduce((acc, pizza) => acc + pizza.price * pizza.count, 0)
+    const totalPizza = pizzaList.reduce(
+      (acc, pizza) => acc + pizza.price * pizza.count,
+      0
+    );
     setTotal(totalPizza);
   };
 
   return (
-   
     <>
       {pizzaList.length === 0 ? (
-        <div style={{display:"flex", flexDirection:"column",justifyContent:"center", alignItems:"center",  backgroundColor: "greenyellow", height:"100vh",
-      }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "greenyellow",
+            height: "100vh",
+          }}
+        >
           <h1>Carrito de compras</h1>
-          <div style={{ backgroundColor: "red", textAlign: "center", width: 350}}>
+          <div
+            style={{ backgroundColor: "red", textAlign: "center", width: 350 }}
+          >
             <p>El Carrito esta Vacío</p>
-            </div>
-            </div>
-            ) : (
-        <>
-           <div style={{display:"flex", flexDirection:"column", alignItems:"center", gap:12, padding:10, backgroundColor: "greenyellow",}}>
-          <h1>Carrito de compras</h1>
-          <h2>Total: ${total}</h2>
-          <div style={{display:"flex",gap:12}}>
-          {pizzaList.map((cartPizza) => (
-            
-            <Cart
-              key={cartPizza.id}
-              producto={cartPizza}
-              increment={incrementHandle}
-              decrement={decrementHandle}
-            />
-            
-          ))};
           </div>
-          <div><button >Comprar</button></div>
+        </div>
+      ) : (
+        <>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 12,
+              padding: 10,
+              backgroundColor: "greenyellow",
+            }}
+          >
+            <h1>Carrito de compras</h1>
+            <h2>Total: ${total}</h2>
+            <div style={{ display: "flex", gap: 12 }}>
+              {pizzaList.map((cartPizza) => (
+                <Cart
+                  key={cartPizza.id}
+                  producto={cartPizza}
+                  increment={incrementHandle}
+                  decrement={decrementHandle}
+                />
+              ))}
+              ;
+            </div>
+            <div>
+              <button>Comprar</button>
+            </div>
           </div>
         </>
-       
       )}
-      
     </>
-    
   );
 };
 
