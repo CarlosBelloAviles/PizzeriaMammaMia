@@ -1,10 +1,5 @@
-.contenedor_padre{
-  min-height: 100dvh;
-  display: grid;
-  grid-template-rows: auto auto auto;
- 
-}
 
+/* ------------------> Navegación <--------------------*/
 
 .container {
   display: flex;
@@ -16,24 +11,21 @@
  
 }
 
-
 .title {
   color: white;
   font-size: 18px;
 }
+
 .Nav_Button {
   display: flex;
   gap: 10px;
   height: 40px;
   align-items: center;
-  
- 
 }
 
 .bottons {
   display: flex;
  gap: 7px;
-
 }
 
 .menu{
@@ -49,6 +41,17 @@
   
 }
 
+.link{
+  text-decoration: none;
+  color: black;
+  border: 3px solid rgb(141, 74, 19);
+  width: 90px;
+  height: 20px;
+  background-color: aliceblue;
+  text-align: center;
+  padding: 4px;
+}
+
 button{
   border: 3px solid rgb(141, 74, 19);
   width: 110px;
@@ -59,9 +62,13 @@ button{
 .total {
   justify-content: end;
   text-align: end;
+  
 }
 
- .header {
+
+/* ------------------> Home <-------------------- */
+ 
+.header {
   background-image: url("./assets/img/delicious-pepperoni-pizza-stockcake.jpg");
   background-color: rgb(100, 100, 100);
   background-blend-mode: soft-light;
@@ -106,8 +113,6 @@ h1 {
  
  }
 
-
-
 .cardPizza {
   display: block;
   position: relative;
@@ -118,10 +123,7 @@ h1 {
   background: #30303d;
   border-top-left-radius: 10%;
   overflow: hidden;
- 
- 
-  
-}
+ }
 
 .cardPizza > div{
   border-top-left-radius: 10%;
@@ -170,6 +172,7 @@ p{
   color: white;
 }
 
+/* -------------------> Formularios Registro & Login <----------------*/
 
 form{
   display: flex;
@@ -178,7 +181,8 @@ form{
   align-items: center;
   background-color:#30303d;
   color: aliceblue;
-  gap: 12px
+  gap: 12px;
+  height: 600px;
   
 }
 
@@ -188,11 +192,20 @@ form{
   text-align: center;
 }
 
+/* -----------------> Carrito de Compras <------------------ */
 
-
+.contenedorCart{
+  height: 800px;
+  display: "flex";
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 60px;
+  background-color: greenyellow;
+}
 .pizzaCart{
- 
-width: 300px;
+ width: 300px;
  justify-content: center;
  text-align: center;
  background-color:darkslategray;
@@ -225,6 +238,9 @@ h3, p{
   background-color: green;
   color: white;
 }
+
+/* ----------------> Pie de Pagina ----------------> */
+
 .footer {
   display: flex;
   justify-content: center;

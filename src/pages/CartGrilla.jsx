@@ -1,5 +1,5 @@
 import { pizzaCart } from "../pizzas";
-import Cart from "./Cart";
+import Cart from "../componentes/Cart";
 import { useEffect, useState } from "react";
 
 const CartGrilla = () => {
@@ -58,35 +58,28 @@ const CartGrilla = () => {
           </div>
         </div>
       ) : (
-        <>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: 12,
-              padding: 10,
-              backgroundColor: "greenyellow",
-            }}
-          >
-            <h1>Carrito de compras</h1>
-            <h2>Total: ${total}</h2>
-            <div style={{ display: "flex", gap: 12 }}>
+        
+          <div className="contenedorCart">
+            <h1 style={{textAlign:"center"}}>Carrito de compras</h1>
+            <h2 style={{textAlign:"center"}}>Total: ${total}</h2>
+           <div style={{ display: "flex", gap: 12,justifyContent:"center", paddingBottom:"10px" }}>
               {pizzaList.map((cartPizza) => (
-                <Cart
+                 <Cart 
                   key={cartPizza.id}
                   producto={cartPizza}
                   increment={incrementHandle}
                   decrement={decrementHandle}
                 />
+                
               ))}
               ;
+             
             </div>
-            <div>
+            <div style={{display:"flex", justifyContent:"center"}}>
               <button>Comprar</button>
             </div>
           </div>
-        </>
+       
       )}
     </>
   );

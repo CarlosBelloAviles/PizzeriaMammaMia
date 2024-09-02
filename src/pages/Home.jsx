@@ -1,6 +1,6 @@
-import Header from "./Header";
+import Header from "../componentes/Header";
 /*import {pizzas} from "../pizzas"*/
-import CardPizza from "./CardPizza";
+import CardPizza from "../componentes/CardPizza";
 import { useEffect, useState } from "react";
 
 function Home() {

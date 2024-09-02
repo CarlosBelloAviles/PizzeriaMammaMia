@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CardPizza = (props) => {
   return (
@@ -25,7 +26,7 @@ const CardPizza = (props) => {
         <hr />
       </div>
       <div className="botones">
-        <button>Ver Más 👀</button>
+        <Link to={"/pizza"}className="link">Ver Más 👀</Link>
         <button className="añadir">Añadir 🛒</button>
       </div>
     </div>

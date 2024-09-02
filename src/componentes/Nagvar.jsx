@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
 
@@ -11,7 +12,7 @@ function Nagvar() {
      
       <p className='title'>Pizzería Mamma Mía!</p>
       <nav className='menu'>
-        <button>🍕 Home</button>
+        <Link to={"/"} className='link'>🍕 Home</Link>
         {
         token? 
         (<div className='bottons' >
@@ -19,14 +20,16 @@ function Nagvar() {
         <button>🔒 Logout</button>
       </div>) : 
         ( <div className='bottons'>
-        <button >🔑 Login</button>
-        <button >🔐 Register</button>
+        <Link to={"/login"} className='link'>🔑 Login</Link>
+        <Link to={"/registro"} className='link'>🔐 Register</Link>
         </div>)
         }
         </nav>
      </div>
-        <div className='total'>  
-        <button >🛒${total.toLocaleString()}</button>
+        <div className='total'>
+        <Link to={"/profile"} className='link'>🔓 Profile</Link> 
+        <Link to={"/carrito"} className="link">🛒${total.toLocaleString()}</Link>
+        
         </div>
     </section>
   )
