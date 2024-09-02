@@ -13,11 +13,14 @@ function Home() {
   const getPizzas = async () => {
     try {
       const response = await fetch("http://localhost:5000/api/pizzas");
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
       const data = await response.json();
       setPizzas(data);
     } catch (error) {
       console.error("Error fetching pizza data:", error);
-      alert(error)
+      alert(`Error fetching pizza data: ${error.message}`)
     }
   };
   return (
