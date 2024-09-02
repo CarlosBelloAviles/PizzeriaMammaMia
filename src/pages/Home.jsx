@@ -14,13 +14,14 @@ function Home() {
     try {
       const response = await fetch("http://localhost:5000/api/pizzas");
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
       setPizzas(data);
     } catch (error) {
-      console.error("Error fetching pizza data:", error);
-      alert(`Error fetching pizza data: ${error.message}`)
+      alert(
+        `Error fetching pizza data: ${error.message} No se pudo obtener la información de las pizzas. Por favor intente mas tarde`
+      );
     }
   };
   return (

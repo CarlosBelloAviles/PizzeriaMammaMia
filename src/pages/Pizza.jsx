@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-/*import PizzaDetalle from "./PizzaDetalle"*/
+
 
 const Pizza = () => {
   const [pizza, setPizza] = useState({});
