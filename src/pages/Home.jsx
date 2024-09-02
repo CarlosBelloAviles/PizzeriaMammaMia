@@ -17,6 +17,7 @@ function Home() {
       setPizzas(data);
     } catch (error) {
       console.error("Error fetching pizza data:", error);
+      alert(error)
     }
   };
   return (
